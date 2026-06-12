@@ -1,0 +1,35 @@
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to track project specific properties and rebuild files as
+# needed.
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+  channel: stable
+
+project_type: app
+
+# Tracks metadata for the flutter migrate command
+migration:
+  platforms:
+    - platform: root
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: android
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: ios
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: web
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: windows
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: macos
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+    - platform: linux
+      create_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
+      base_revision: 6d4af068f3d4c626e37b1e3ddfb31e2f6e8f2e88
