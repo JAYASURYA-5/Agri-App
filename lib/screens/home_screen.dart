@@ -3,6 +3,7 @@ import '../widgets/weather_card.dart';
 import '../widgets/live_data_card.dart';
 import '../widgets/intercrop_card.dart';
 import '../widgets/quick_action_button.dart';
+import 'weather_forecast_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -195,7 +196,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const WeatherForecastScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF22C55E),
                         padding: const EdgeInsets.symmetric(vertical: 12),
