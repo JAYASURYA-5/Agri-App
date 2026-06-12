@@ -20,12 +20,13 @@ class QuickActionButton extends StatelessWidget {
         // Handle action
       },
       child: Container(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: Colors.grey[200]!,
+            color: iconColor.withOpacity(0.18),
+            width: 1,
           ),
         ),
         child: Column(
@@ -34,15 +35,16 @@ class QuickActionButton extends StatelessWidget {
             Icon(
               icon,
               color: iconColor,
-              size: 28,
+              size: 32,
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 10),
             Text(
               label,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
+                color: Colors.black87,
                 height: 1.2,
               ),
             ),
