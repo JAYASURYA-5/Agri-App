@@ -5,6 +5,7 @@ import '../widgets/intercrop_card.dart';
 import '../widgets/quick_action_button.dart';
 import 'weather_forecast_screen.dart';
 import 'intercrop_advisor_screen.dart';
+import 'agribot_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -398,16 +399,26 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFC2FBD7),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.smart_toy_outlined, // Robot icon
-                          color: Color(0xFF22C55E),
-                          size: 24,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AgriBotScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFC2FBD7),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.smart_toy_outlined, // Robot icon
+                            color: Color(0xFF22C55E),
+                            size: 24,
+                          ),
                         ),
                       ),
                     ],
@@ -478,7 +489,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const IntercropAdvisorScreen(),
+                            ),
+                          );
+                        },
                         child: const Text(
                           'View Report',
                           style: TextStyle(
