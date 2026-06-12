@@ -7,6 +7,9 @@ import 'weather_forecast_screen.dart';
 import 'intercrop_advisor_screen.dart';
 import 'agribot_screen.dart';
 import 'lms_screen.dart';
+import 'disease_prediction_screen.dart';
+import 'notes_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -560,14 +563,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       QuickActionButton(
                         icon: Icons.photo_camera_outlined,
                         label: 'Disease\nDetection',
-                        color: Color(0xFFFFEBEE),
-                        iconColor: Color(0xFFE53935),
+                        color: const Color(0xFFFFEBEE),
+                        iconColor: const Color(0xFFE53935),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DiseasePredictionScreen(),
+                            ),
+                          );
+                        },
                       ),
                       QuickActionButton(
                         icon: Icons.article_outlined,
                         label: 'Notes',
-                        color: Color(0xFFFFFDE7),
-                        iconColor: Color(0xFFFBC02D),
+                        color: const Color(0xFFFFFDE7),
+                        iconColor: const Color(0xFFFBC02D),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const NotesScreen(),
+                            ),
+                          );
+                        },
                       ),
                       QuickActionButton(
                         icon: Icons.newspaper_outlined,

@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.agri_tmp_fix"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
