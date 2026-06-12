@@ -8,17 +8,17 @@ class QuickActionButton extends StatelessWidget {
     required this.label,
     required this.color,
     required this.iconColor,
+    this.onTap,
   }) : super(key: key);
   final IconData icon;
   final String label;
   final Color color;
   final Color iconColor;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-      onTap: () {
-        // Handle action
-      },
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
         decoration: BoxDecoration(

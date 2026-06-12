@@ -6,6 +6,7 @@ import '../widgets/quick_action_button.dart';
 import 'weather_forecast_screen.dart';
 import 'intercrop_advisor_screen.dart';
 import 'agribot_screen.dart';
+import 'lms_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
+  int? _selectedIndex;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -541,12 +542,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisSpacing: 16,
                     crossAxisSpacing: 16,
                     childAspectRatio: 0.9,
-                    children: const [
+                    children: [
                       QuickActionButton(
                         icon: Icons.school,
                         label: 'LMS',
-                        color: Color(0xFFE8EAF6),
-                        iconColor: Color(0xFF3F51B5),
+                        color: const Color(0xFFE8EAF6),
+                        iconColor: const Color(0xFF3F51B5),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LmsScreen(),
+                            ),
+                          );
+                        },
                       ),
                       QuickActionButton(
                         icon: Icons.photo_camera_outlined,
@@ -639,14 +648,26 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Settings',
           ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFF22C55E),
+        currentIndex: _selectedIndex ?? 0,
+        selectedItemColor: _selectedIndex != null ? const Color(0xFF22C55E) : Colors.grey[400],
         unselectedItemColor: Colors.grey[400],
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
           });
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LmsScreen(),
+              ),
+            ).then((_) {
+              setState(() {
+                _selectedIndex = null;
+              });
+            });
+          }
         },
       ),
     );
